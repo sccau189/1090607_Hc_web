@@ -113,16 +113,77 @@ nav{
     nav{
         div{
             @include table-box();
+            
 
         }
     }
 
     #picture {
         @include table-box();
+        grid-template-columns: repeat(2, 1fr);
+       div{
+           height: 300px;
+       }
+
+        div:nth-child(1){
+            grid-column: 1 / 3;
+        }
+        div:nth-child(2){
+            background-image: url(./img/p-beach-1.jpg);
+        }
+        div:nth-child(3){
+            background-image: url(./img/p-beach-2.jpg);
+        }
+        
 
     }
 
     #content {
         @include table-box();
+    }
+}
+
+// RWD
+// 手機 :小於等於767
+@media screen and (max-width: 767px) {
+    @mixin phone-box {
+        width: 100%;
+        transition: 0.3s;
+        padding: 0 15px;
+    }
+
+    nav{
+        div{
+            @include phone-box();
+        }
+    }
+
+    #picture{
+        @include phone-box();
+        grid-template-columns: 1fr;
+       
+        
+        div{
+            height: 450px;
+
+            &:nth-child(2){
+                background-image: url(./img/m-beach-1.png);
+                background-size: cover;
+            }
+            &:nth-child(3){
+                background-image: url(./img/m-beach-2.png);
+                background-size: cover;
+            }
+            
+        }    
+    }
+
+    #content {
+        @include phone-box();
+        grid-template-columns: 1fr;
+
+        h1{
+            grid-column: 1 / 2;
+        }
     }
 }
