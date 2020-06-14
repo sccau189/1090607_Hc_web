@@ -101,12 +101,30 @@ nav div a:hover {
   margin-bottom: 20px;
 }
 
+#menu {
+  display: none;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   nav div {
     width: 750px;
     margin: 0 auto;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    display: none;
+  }
+  nav #menu #menu {
+    display: block;
+  }
+  nav #menu #menu a {
+    display: none;
+  }
+  nav #menu #menu a:nth-child(1) {
+    display: block;
+  }
+  nav #menu #menu:hover a:nth-child(n+2) {
+    display: block;
+    padding: 20px 0;
   }
   #picture {
     width: 750px;
@@ -144,6 +162,20 @@ nav div a:hover {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     padding: 0 15px;
+    display: none;
+  }
+  nav div #menu {
+    display: block;
+  }
+  nav div #menu a {
+    display: none;
+  }
+  nav div #menu a:nth-child(1) {
+    display: block;
+  }
+  nav div #menu:hover a:nth-child(n+2) {
+    display: block;
+    padding: 20px 0;
   }
   #picture {
     width: 100%;

@@ -120,8 +120,35 @@ nav{
     nav{
         div{
             @include table-box();
+            // 隱藏所有區塊
+            display: none ;
             
 
+        }
+
+        #menu {
+                // 顯示選單區塊
+                display: block;
+    
+                a{ 
+                    // 隱藏所有連結
+                    display: none;
+                    
+                    // 顯示第一個選單連結
+                    &:nth-child(1){
+                        display: block;
+                    }
+                }
+        
+                // 滑入顯示選單
+                // :nth-child(公式)
+                // an+b
+                // n+2 ( n 從0開始增加 )
+                &:hover a:nth-child(n+2){
+                    display: block;
+                    padding: 20px 0;
+                }
+            }
         }
     }
 
@@ -162,6 +189,31 @@ nav{
     nav{
         div{
             @include phone-box();
+            display: none ;
+
+            #menu {
+                // 顯示選單區塊
+                display: block;
+    
+                a{ 
+                    // 隱藏所有連結
+                    display: none;
+
+                    // 顯示第一個選單連結
+                    &:nth-child(1){
+                        display: block;
+                    }
+                }
+        
+                // 滑入顯示選單
+                // :nth-child(公式)
+                // an+b
+                // n+2 ( n 從0開始增加 )
+                &:hover a:nth-child(n+2){
+                    display: block;
+                    padding: 20px 0;
+                }
+            }
         }
     }
 
