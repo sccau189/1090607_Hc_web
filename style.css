@@ -113,16 +113,16 @@ nav div a:hover {
     transition: 0.3s;
     display: none;
   }
-  nav #menu #menu {
+  nav #menu {
     display: block;
   }
-  nav #menu #menu a {
+  nav #menu a {
     display: none;
   }
-  nav #menu #menu a:nth-child(1) {
+  nav #menu a:nth-child(1) {
     display: block;
   }
-  nav #menu #menu:hover a:nth-child(n+2) {
+  nav #menu:hover a:nth-child(n+2) {
     display: block;
     padding: 20px 0;
   }
@@ -164,16 +164,16 @@ nav div a:hover {
     padding: 0 15px;
     display: none;
   }
-  nav div #menu {
+  nav #menu {
     display: block;
   }
-  nav div #menu a {
+  nav #menu a {
     display: none;
   }
-  nav div #menu a:nth-child(1) {
+  nav #menu a:nth-child(1) {
     display: block;
   }
-  nav div #menu:hover a:nth-child(n+2) {
+  nav #menu:hover a:nth-child(n+2) {
     display: block;
     padding: 20px 0;
   }
